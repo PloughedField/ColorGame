@@ -13,9 +13,13 @@ var easyButton = document.querySelector(".mode");
 var timeoutID;
 
 function showAlert() {
-	timeoutID = setTimeout(alert, 5000, 'setTimeout Demo!');
-	setTimeout(reset, 5001);
-}
+	timeoutID = setTimeout(alert, 60000, 'Too slow, try faster next time!');
+	setTimeout(reset, 61000);
+	
+	}
+
+
+
 
 
 init();
@@ -23,6 +27,7 @@ init();
 function init() {
 	colorDisplay.textContent = pickedColor;
 	setupSquares();
+	showAlert();
 	setupMode();
 	reset();
 }
