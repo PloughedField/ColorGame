@@ -1,3 +1,4 @@
+// initializing variables
 var numSquares = 6;
 var colors = [];
 var pickedColor;
@@ -10,6 +11,8 @@ var resetButton = document.querySelector("#reset");
 var modeButtons = document.querySelectorAll(".mode");
 var easyButton = document.querySelector(".mode");
 
+
+// time out function 60s
 var timeoutID;
 
 function showAlert() {
@@ -21,7 +24,7 @@ function showAlert() {
 
 
 
-
+// initializing Game functions
 init();
 
 function init() {
@@ -41,7 +44,7 @@ resetButton.addEventListener("click", function() {
 
 
 
-
+// function select color and messega game
 
 function setupSquares() {
 	for (var i = 0; i < squares.length; i++) {
@@ -62,7 +65,7 @@ function setupSquares() {
 }
 
 
-
+// function setup Mode
 function setupMode() {
 	for(var i = 0; i < modeButtons.length; i++) {
 		modeButtons[i].addEventListener("click", function() {
@@ -85,6 +88,8 @@ function setupMode() {
 	}
 }
 
+// reset game
+
 function reset() {
 	colors = genRandomColors(numSquares);
 	pickedColor = chooseColor();
@@ -102,6 +107,9 @@ function reset() {
 		}
 	}
 }
+
+
+// random colors 
 
 function changeColors(color) {
 	for(var i = 0; i < squares.length; i++) {
